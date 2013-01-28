@@ -1,0 +1,30 @@
+{
+  "conflicting": {
+  },
+  "name": "intermediate",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "replacing": {
+  },
+  "suggestions": {
+  },
+  "dependencies": {
+  },
+  "groupings": {
+  },
+  "version": "0.0.1",
+  "recipes": {
+    "intermediate::default": "Prints hello world output to log file"
+  },
+  "license": "All rights reserved",
+  "recommendations": {
+  },
+  "description": "Installs/Configures intermediate",
+  "attributes": {
+  },
+  "platforms": {
+  },
+  "maintainer_email": "adin@stationxinc.com",
+  "providing": {
+  },
+  "maintainer": "Station X"
+}
