@@ -2,7 +2,7 @@
   "dependencies": {
   },
   "name": "hello_world",
-  "maintainer_email": "ryan.geyer@rightscale.com",
+  "maintainer_email": "adin@stationxinc.com",
   "attributes": {
   },
   "license": "All rights reserved",
@@ -10,7 +10,7 @@
   },
   "platforms": {
   },
-  "maintainer": "RightScale",
+  "maintainer": "Station X",
   "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
   "version": "0.0.1",
   "recommendations": {

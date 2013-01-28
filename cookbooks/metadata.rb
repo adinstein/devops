@@ -1,5 +1,5 @@
-maintainer       "RightScale"
-maintainer_email "ryan.geyer@rightscale.com"
+maintainer       "Station X"
+maintainer_email "adin@stationxinc.com"
 license          "All rights reserved"
 description      "Installs/Configures hello_world"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
