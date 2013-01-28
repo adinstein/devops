@@ -6,4 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+rightscale_marker :begin
 log "Hello World! Say Hi back to Adin"
+rightscale_marker :end

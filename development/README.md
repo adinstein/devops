@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Overview
 ========
 
@@ -64,3 +65,9 @@ Next Steps
 ==========
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
+=======
+devops
+======
+
+dev / ops repo for chef scripts and other devops source code
+>>>>>>> a07c46063d043fb94e9bdafa16a13a890a1e941c
