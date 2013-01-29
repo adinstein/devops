@@ -43,12 +43,12 @@ package "postgresql" do
   when "redhat","centos","scientific"
     case 
     when node.platform_version.to_f >= 6.0
-      package_name "postgresql"
+      package_name "postgresql91"
     else
-      package_name "postgresql#{node['postgresql']['version'].split('.').join}"
+      package_name "postgresql91#{node['postgresql']['version'].split('.').join}"
     end
   else
-    package_name "postgresql"
+    package_name "postgresql91"
   end
 end
 
@@ -56,12 +56,12 @@ case node.platform
 when "redhat","centos","scientific"
   case
   when node.platform_version.to_f >= 6.0
-    package "postgresql-server"
+    package "postgresql91-server"
   else
-    package "postgresql#{node['postgresql']['version'].split('.').join}-server"
+    package "postgresql91#{node['postgresql']['version'].split('.').join}-server"
   end
 when "fedora","suse"
-  package "postgresql-server"
+  package "postgresql91-server"
 end
 
 execute "/sbin/service postgresql initdb" do
