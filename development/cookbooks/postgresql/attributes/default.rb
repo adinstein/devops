@@ -21,9 +21,9 @@ case platform
 when "debian"
 
   if platform_version.to_f == 5.0
-    default[:postgresql][:version] = "8.3"
+    default[:postgresql][:version] = "9.2"
   elsif platform_version =~ /squeeze/
-    default[:postgresql][:version] = "8.4"
+    default[:postgresql][:version] = "9.2"
   end
 
   set[:postgresql][:dir] = "/etc/postgresql/#{node[:postgresql][:version]}/main"
@@ -32,11 +32,11 @@ when "ubuntu"
 
   case
   when platform_version.to_f <= 9.04
-    default[:postgresql][:version] = "8.3"
+    default[:postgresql][:version] = "9.2"
   when platform_version.to_f <= 11.04
-    default[:postgresql][:version] = "8.4"
+    default[:postgresql][:version] = "9.2"
   else
-    default[:postgresql][:version] = "9.1"
+    default[:postgresql][:version] = "9.2"
   end
 
   set[:postgresql][:dir] = "/etc/postgresql/#{node[:postgresql][:version]}/main"
@@ -44,9 +44,9 @@ when "ubuntu"
 when "fedora"
 
   if platform_version.to_f <= 12
-    default[:postgresql][:version] = "8.3"
+    default[:postgresql][:version] = "9.2"
   else
-    default[:postgresql][:version] = "8.4"
+    default[:postgresql][:version] = "9.2"
   end
 
   set[:postgresql][:dir] = "/var/lib/pgsql/data"
@@ -59,14 +59,14 @@ when "redhat","centos","scientific","amazon"
 when "suse"
 
   if platform_version.to_f <= 11.1
-    default[:postgresql][:version] = "8.3"
+    default[:postgresql][:version] = "9.2"
   else
-    default[:postgresql][:version] = "8.4"
+    default[:postgresql][:version] = "9.2"
   end
 
   set[:postgresql][:dir] = "/var/lib/pgsql/data"
 
 else
-  default[:postgresql][:version] = "8.4"
+  default[:postgresql][:version] = "9.2"
   set[:postgresql][:dir]         = "/etc/postgresql/#{node[:postgresql][:version]}/main"
 end
