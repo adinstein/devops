@@ -16,6 +16,8 @@ log " Setting up the Station X PostgreSQL Environment"
 
 # Set PostgreSQL 9.1 specific node variables in this recipe.
 #
+command "wget --directory-prefix=/tmp/ http://yum.pgrpms.org/9.1/redhat/rhel-6-x86_64/pgdg-centos91-9.1-4.noarch.rpm"
+command "rpm -i /tmp/pgdg-centos91-9.1-4.noarch.rpm"
 
 node[:db_postgres][:server_packages_install] = value_for_platform(
   ["centos", "redhat"] => {
