@@ -6,4 +6,5 @@ description      'Installs/Configures stx_db_postgres'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
+depends "rightscale"
 recipe "stx_db_postgres:install", "Installs Station X specifc libraires, extensions, packages on top of Stadard Postgres"
