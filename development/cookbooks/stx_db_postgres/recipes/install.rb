@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: stx_db_postgres
-# Recipe:: default
+# Recipe:: install
 #
 # Copyright 2013, YOUR_COMPANY_NAME
 #
