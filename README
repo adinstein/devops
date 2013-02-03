@@ -1,0 +1,10 @@
+WELCOME to the devops github repo
+
+This is a repo for all things devops and can be used for anything related to devops, infrastructure as code, system administration scripts relating to core software deployment
+
+This repo should not be used for system adminsitration of general IT or infrastruture not relating directly to the core product
+
+
+Please feel free to check in all Chef scripts, shell scripts, perl scritps, etc. into the repo
+
+Happy devops to you!

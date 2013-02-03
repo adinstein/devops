@@ -1,0 +1,31 @@
+{
+  "replacing": {
+  },
+  "maintainer": "Station X",
+  "version": "0.0.1",
+  "recipes": {
+    "intermediate::default": "Prints hello world output to log file"
+  },
+  "attributes": {
+  },
+  "providing": {
+  },
+  "description": "Installs/Configures intermediate",
+  "recommendations": {
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "suggestions": {
+  },
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "platforms": {
+  },
+  "license": "All rights reserved",
+  "maintainer_email": "adin@stationxinc.com",
+  "name": "intermediate"
+}
