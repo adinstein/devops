@@ -89,7 +89,7 @@ when "amazon"
 
 when "redhat", "centos", "scientific", "oracle"
 
-  default['postgresql']['version'] = "8.4"
+  default['postgresql']['version'] = "9.1"
   default['postgresql']['dir'] = "/var/lib/pgsql/data"
 
   if node['platform_version'].to_f >= 6.0
@@ -118,7 +118,7 @@ when "suse"
   default['postgresql']['server']['service_name'] = "postgresql"
 
 else
-  default['postgresql']['version'] = "8.4"
+  default['postgresql']['version'] = "9.1"
   default['postgresql']['dir']         = "/etc/postgresql/#{node['postgresql']['version']}/main"
   default['postgresql']['client']['packages'] = ["postgresql"]
   default['postgresql']['server']['packages'] = ["postgresql"]
@@ -182,7 +182,7 @@ default['postgresql']['pg_hba'] = [
 default['postgresql']['password'] = Hash.new
 
 default['postgresql']['enable_pitti_ppa'] = false
-default['postgresql']['enable_pgdg_yum'] = false
+default['postgresql']['enable_pgdg_yum'] = true
 
 # The PostgreSQL RPM Building Project built repository RPMs for easy
 # access to the PGDG yum repositories. Links to RPMs for installation
