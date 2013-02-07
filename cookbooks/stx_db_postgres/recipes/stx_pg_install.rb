@@ -38,23 +38,27 @@ yum_package "R.x86_64" do
   action [:install]
 end
 
-include_recipe 'postgresql::yum_pgdg_postgresql'
+#install PL/R
 
-
-yum_package "postgresql91-server.x86_64" do
+yum_package "plr91.x86_64" do
   action [:install]
 end
 
-yum_package "postgresql91-devel.x86_64" do
-  action [:install]
-end
+bash "Initialize Postgres" do
+    user "postgres"
+      code <<-EOH
+      ln -s /usr/pgsql-9.1/ pgsql 
+      # need to parameterize the location the db is initialized in below this needs to be the same directory as the storage stripe and can use the same attirbute
+      /usr/local/pgsql/bin/initdb /mnt/storage1/ 
+      EOH
+    end
 
-yum_package "postgresql91-contrib.x86_64" do
-  action [:install]
-end
 
-yum_package "postgresql91-plperl.x86_64" do
-  action [:install]
+#start the postgres service
+
+service "postgresql-9.1" do 
+  #  action :start, :immediately 
+  action :start
 end
 
 
