@@ -10,3 +10,4 @@ depends "postgresql"
 
 recipe "stx_db_postgres::stx_pg_install","Installs and Configures base postgres install for Station X"
 recipe "stx_db_postgres::stx_postbio_install","Installs postbio from source loacated on S3"
+recipe "stx_db_postgres::stx_pg_control","Starts the postgres service"

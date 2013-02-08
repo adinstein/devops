@@ -44,21 +44,22 @@ yum_package "plr91.x86_64" do
   action [:install]
 end
 
-bash "Initialize Postgres" do
-    user "postgres"
-      code <<-EOH
-      ln -s /usr/pgsql-9.1/ pgsql 
-      # need to parameterize the location the db is initialized in below this needs to be the same directory as the storage stripe and can use the same attirbute
-      /usr/local/pgsql/bin/initdb /mnt/storage1/ 
-      EOH
-    end
+#commneting out and using rightscript for the demo.  We will need to understand why "user" is not supported by this version of right link as indicated in the logs
+#bash "Initialize Postgres" do
+#    user "postgres"
+#      code <<-EOH
+#      ln -s /usr/pgsql-9.1/ pgsql 
+#      # need to parameterize the location the db is initialized in below this needs to be the same directory as the storage stripe and can use the same attirbute
+#      /usr/local/pgsql/bin/initdb /mnt/storage1/ 
+#      EOH
+#    end
 
-
+#putting this in its own recipe as part of the workaround for the above rightlink issue
 #start the postgres service
 
-service "postgresql-9.1" do 
+#service "postgresql-9.1" do 
   #  action :start, :immediately 
-  action :start
-end
+#  action :start
+#end
 
 
